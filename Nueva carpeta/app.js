@@ -28,6 +28,7 @@ btnGenerar.addEventListener('click', () => {
     // 4. Manipulación del DOM para mostrar el resultado 
     // Insertamos el texto del token dentro del div correspondiente 
     tokenOutput.textContent = tokenSimulado;
+    console.log ("La accion del token a sido correcta");
 
     // Removemos la clase 'hidden' para que el contenedor sea visible en la pantalla 
     resultadoContenedor.classList.remove('hidden');
