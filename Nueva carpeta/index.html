@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica: Generador de Token</title>
+    <style>
+        /* Estilos base para asegurar una presentación limpia */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .alumno-info {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        /* Clase clave: oculta el contenedor inicialmente */
+        .hidden {
+            display: none !important;
+        }
+        .resultado-box {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #fafafa;
+            border: 1px dashed #bbb;
+            border-radius: 4px;
+            text-align: left;
+        }
+        .resultado-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        #tokenOutput {
+            display: block;
+            padding: 10px;
+            background-color: #f1f2f6;
+            border-left: 5px solid #747d8c;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            word-break: break-all;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Práctica Generador de Token</h1>
+        <div class="alumno-info">
+            <strong>Alumno:</strong> Kendryc Antonio Amador Siqueiros
+        </div>
+
+        <form onsubmit="return false;">
+            <label for="emailInput">Introduce tu correo para simular la creación de un token de seguridad:</label>
+            <input type="email" id="emailInput" placeholder="correo@ejemplo.com" required>
+            
+            <button type="button" id="btnGenerar">Generar Token</button>
+        </form>
+
+        <div id="resultadoContenedor" class="resultado-box hidden">
+            <h3>🔑 Token Generado Exitosamente:</h3>
+            <span id="tokenOutput"></span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
