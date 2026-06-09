@@ -41,4 +41,5 @@ btnGenerar.addEventListener('click', () => {
     // Opcional: Cambiamos el estilo dinámicamente mediante el DOM para dar feedback visual 
     tokenOutput.style.backgroundColor = "#e8f8f5"; 
     tokenOutput.style.borderLeftColor = "#2ecc71"; // Cambia a verde al completarse 
+    console.info(nombrealumno + fecha)
 });
